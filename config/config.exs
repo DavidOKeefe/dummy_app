@@ -8,7 +8,8 @@
 import Config
 
 config :dummy_app,
-  ecto_repos: [DummyApp.Repo]
+  ecto_repos: [DummyApp.Repo],
+  test_value: System.get_env("TEST_VALUE") || "foo"
 
 # Configures the endpoint
 config :dummy_app, DummyAppWeb.Endpoint,
